@@ -1,0 +1,21 @@
+name: patch2pix
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - pytorch  
+  - cudatoolkit=10.2
+  - torchvision  
+  - jupyter
+  - scipy
+  - matplotlib
+  - pillow=6.0.0=py37he7afcd5_0
+  - pip  
+  - pip:
+      - transforms3d
+      - pydegensac
+      - h5py
+      - opencv-python
+      - visdom==0.1.8.8

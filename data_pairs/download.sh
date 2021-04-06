@@ -1,0 +1,1 @@
+wget https://vision.in.tum.de/webshare/u/zhouq/patch2pix/data_pairs/megadepth_pairs.ov0.35_imrat1.5.pair500.excl_test.npy
