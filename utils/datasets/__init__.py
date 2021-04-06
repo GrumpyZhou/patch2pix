@@ -1,2 +1,1 @@
-from .dataset_cambridge import ImMatchDatasetCambridge
 from .dataset_megadepth import ImMatchDatasetMega
