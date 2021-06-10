@@ -9,7 +9,7 @@ def load_im_tensor(im_path, device, imsize=None, with_gray=True):
 
     # Resize
     wt, ht = wo, ho = im.width, im.height
-    if imsize and max(wo, ho) > imsize:
+    if imsize and max(wo, ho) > imsize and imsize > 0:
         scale = imsize / max(wo, ho)
         ht, wt = int(round(ho * scale)), int(round(wo * scale))
         im = im.resize((wt, ht), Image.BICUBIC)    
@@ -38,7 +38,7 @@ def load_im_flexible(im_path, k_size=2, upsample=16, imsize=None, crop_square=Fa
     img = Image.open(im_path)
     img = img.convert('RGB')
     wo, ho = img.width, img.height
-    if not imsize:
+    if not (imsize and imsize > 0):
         imsize = max(wo, ho)
     elif imsize > max(wo, ho):     # Disable upsampling
         imsize = max(wo, ho)
