@@ -276,6 +276,10 @@ class Patch2Pix(nn.Module):
         return fine_matches, fine_scores, coarse_matches  
     
     def refine_matches(self, im1, im2, coarse_matches, io_thres):
+        # Handle empty coarse matches
+        if len(coarse_matches) == 0:
+            return np.empty((0, 4)), np.empty((0,)), np.empty((0, 4))
+
         if type(coarse_matches) == np.ndarray:
             coarse_matches_ = torch.from_numpy(coarse_matches).to(self.device).unsqueeze(0)  # 1, N, 4            
         elif type(coarse_matches) == torch.Tensor:
