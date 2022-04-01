@@ -2,7 +2,7 @@
 
 
 # Patch2Pix for Accurate Image Correspondence Estimation
-This repository contains the Pytorch implementation of our  paper accepted at CVPR2021: Patch2Pix: Epipolar-Guided Pixel-Level Correspondences. [[Paper]](https://arxiv.org/abs/2012.01909) [[Video]](https://www.youtube.com/watch?v=Qxkyjsgi8xY).
+This repository contains the Pytorch implementation of our  paper accepted at CVPR2021: Patch2Pix: Epipolar-Guided Pixel-Level Correspondences. [[Paper]](https://arxiv.org/abs/2012.01909) [[Video]](https://www.youtube.com/watch?v=Qxkyjsgi8xY)[[Slides]](https://drive.google.com/file/d/1prmyTiYLGq5iDJnDebL-GrANKh2lvB8f/view?usp=sharing).
 
 ![Overview](patch2pix.png)
 To use our code, first download the repository:
