@@ -91,9 +91,6 @@ def train_epoch(epoch, net, train_loader, train_vis, args, lprint_):
     lprint_(f'ksize={ksize} cthres={cthres} cls_dthres={cls_dthres} '
             f'epi_dthre={epi_dthres} ptmax={args.ptmax} panc={net.panc}')
     for i, batch in enumerate(train_loader):
-        if i > 20:
-            break
-            
         im_src, im_pos, Fs = net.load_batch_(batch, dtype='pair')
         
         # Estimate patch-level matches 
